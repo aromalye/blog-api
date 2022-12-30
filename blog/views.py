@@ -10,6 +10,5 @@ class BlogList(generics.ListCreateAPIView):
     serializer_class = PostSerializer
 
 class BlogDetail(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = (permissions.IsAdminUser)
     queryset = Post.objects.all()
     serializer_class = PostSerializer
